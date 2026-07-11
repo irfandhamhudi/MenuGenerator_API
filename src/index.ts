@@ -35,7 +35,11 @@ const start = async () => {
   if (cleaned > 0) console.log(`Cleaned ${cleaned} expired trashed menus`);
 };
 
-start();
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+if (!process.env.VERCEL) {
+  start();
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
+export default app;
