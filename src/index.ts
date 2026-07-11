@@ -11,9 +11,10 @@ import publicRoutes from "./routes/public.js";
 const app = express();
 const PORT = process.env.PORT || 8000;
 
+const corsOrigin = process.env.CORS_ORIGIN || "http://localhost:5173";
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN || "http://localhost:5173",
+    origin: corsOrigin.split(",").map(s => s.trim()),
     credentials: true,
   })
 );

@@ -27,14 +27,15 @@ export const register = async (req: AuthRequest, res: Response): Promise<void> =
     const user = await User.create({ username, email, password });
     const token = createToken(user._id.toString());
 
+    const isProd = process.env.NODE_ENV === "production";
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
+      secure: isProd,
+      sameSite: isProd ? "none" : "lax",
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
-    res.status(201).json({
+    res.json({
       user: { id: user._id, username: user.username, email: user.email },
     });
   } catch (error: any) {
@@ -60,10 +61,11 @@ export const login = async (req: AuthRequest, res: Response): Promise<void> => {
 
     const token = createToken(user._id.toString());
 
+    const isProd = process.env.NODE_ENV === "production";
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
+      secure: isProd,
+      sameSite: isProd ? "none" : "lax",
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
