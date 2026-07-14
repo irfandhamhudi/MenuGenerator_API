@@ -36,7 +36,7 @@ const menuSchema = new Schema<IMenu>(
     },
     template: {
       type: String,
-      enum: ["modern", "classic", "minimal", "dark", "bistro", "elegant", "vintage", "neobrutalism", "nature", "asian", "monochrome", "playful", "luxury", "fiesta", "mediterranean", "farm", "cyberpunk", "parisian", "tropical", "korean"],
+      enum: ["modern", "classic", "elegant", "neobrutalism", "nature", "farm", "rimberio"],
       default: "modern",
     },
     categories: {
