@@ -14,9 +14,9 @@ export interface IMenu extends Document {
 
 const menuItemSchema = new Schema<MenuItem>(
   {
-    category: { type: String, required: true },
-    name: { type: String, required: true },
-    price: { type: Number, required: true },
+    category: { type: String, default: "" },
+    name: { type: String, required: true, trim: true },
+    price: { type: Number, required: true, default: 0 },
     image: { type: String, default: "" },
   },
   { _id: false }
