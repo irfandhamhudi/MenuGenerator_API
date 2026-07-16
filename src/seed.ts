@@ -77,7 +77,7 @@ const menuData: {
   },
   {
     title: "Menu Spesial Malam",
-    template: "dark",
+    template: "elegant",
     categories: ["Makanan", "Minuman", "Cemilan", "Topping"],
     items: [
       { category: "Makanan", name: "Steak Wagyu", price: 120000 },
@@ -106,7 +106,7 @@ const menuData: {
   },
   {
     title: "Menu Sederhana",
-    template: "minimal",
+    template: "modern",
     categories: ["Makanan", "Minuman", "Cemilan", "Topping"],
     items: [
       { category: "Makanan", name: "Nasi Putih", price: 5000 },
@@ -130,7 +130,7 @@ const menuData: {
   },
   {
     title: "Menu Kafe Kita",
-    template: "bistro",
+    template: "farm",
     categories: ["Makanan", "Minuman", "Cemilan", "Topping"],
     items: [
       { category: "Makanan", name: "Sandwich Grilled Chicken", price: 35000 },

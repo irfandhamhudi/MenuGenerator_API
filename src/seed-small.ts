@@ -27,7 +27,7 @@ const menuData: {
   },
   {
     title: "Kopi Senja",
-    template: "bistro",
+    template: "farm",
     categories: ["Kopi", "Non-Kopi", "Cemilan"],
     items: [
       { category: "Kopi", name: "Espresso", price: 20000 },
@@ -39,7 +39,7 @@ const menuData: {
   },
   {
     title: "Makan Siang",
-    template: "minimal",
+    template: "modern",
     categories: ["Paket", "Minuman"],
     items: [
       { category: "Paket", name: "Paket Ayam + Nasi", price: 20000 },
